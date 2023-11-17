@@ -1,11 +1,14 @@
 package br.com.marvelopedia.bemol.steps;
 
+import br.com.marvelopedia.bemol.core.BasePage;
+import br.com.marvelopedia.bemol.core.DriverFactory;
 import br.com.marvelopedia.bemol.pages.LoginPage;
+import cucumber.api.java.After;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Então;
 import cucumber.api.java.pt.Quando;
 
-public class LoginSteps {
+public class LoginSteps extends BasePage {
 
     private LoginPage login = new LoginPage();
 
@@ -15,8 +18,8 @@ public class LoginSteps {
         login.insertPass("1234567");
     }
 
-    @Quando("^clicar no botão Login$")
-    public void clicar_no_botão_Login() throws Throwable {
+    @Quando("^clicar no botao de Login$")
+    public void clicar_no_botao_de_Login() throws Throwable {
         login.clickLogin();
     }
 
@@ -24,4 +27,14 @@ public class LoginSteps {
     public void login_deve_ser_realizado_com_sucesso() throws Throwable {
         login.loginOk();
     }
+
+    @After({"@QA"})
+    public void tearDown() {
+        DriverFactory.killDriver();
+        System.out.println("Teste finalizado");
+        System.out.println("====================================");
+        System.out.println("====================================");
+    }
+
+ 
 }

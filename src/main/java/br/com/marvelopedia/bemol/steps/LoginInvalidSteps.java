@@ -17,8 +17,8 @@ public class LoginInvalidSteps {
 
     }
 
-    @Quando("^clicar no botão Login$")
-    public void clicar_no_botão_Login() throws Throwable {
+    @Quando("^selecionar o botão Login$")
+    public void selecionar_o_botão_Login() throws Throwable {
         login.clickLogin();
     }
 
