@@ -5,11 +5,11 @@ import br.com.marvelopedia.bemol.core.BasePage;
 public class RegisterPage extends BasePage {
 
     public void clickRegister(){
-        findElementByText("//android.widget.Button[@text='Crie uma conta']").click();
+        findElementByText("//android.view.View[@text='Crie uma conta']").click();
     }
 
     public void insertNewEmail(String newEmail) {
-        sendKeyByHint("//android.widget.EditText[@hint='E-mail']", newEmail);
+        sendKeyByHint("//android.widget.EditText[@hint='Email']", newEmail);
     }
 
     public void insertPass(String pass) {
@@ -21,7 +21,7 @@ public class RegisterPage extends BasePage {
     }
 
     public void clickRegisterButton(){
-        findElementByText("//android.widget.Button[@text='Cadastrar']");
+        findElementByText("//android.widget.Button[@text='Cadastrar']").click();
     }
 
     public void registerOk() {
