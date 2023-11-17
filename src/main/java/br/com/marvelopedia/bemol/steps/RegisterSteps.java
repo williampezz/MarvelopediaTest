@@ -1,12 +1,13 @@
 package br.com.marvelopedia.bemol.steps;
 
+import br.com.marvelopedia.bemol.core.BasePage;
 import br.com.marvelopedia.bemol.pages.RegisterPage;
 import br.com.marvelopedia.bemol.utils.EmailGen;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Então;
 import cucumber.api.java.pt.Quando;
 
-public class RegisterSteps {
+public class RegisterSteps extends BasePage {
 
     EmailGen emailGenerator = new EmailGen();
     String generatedEmail = emailGenerator.genEmailRandom();
@@ -20,13 +21,17 @@ public class RegisterSteps {
         register.insertNewPass("123456");
     }
 
-    @Quando("^selecionar o botão Cadastrar$")
-    public void selecionar_o_botão_Cadastrar() throws Throwable {
+
+
+    @Quando("^selecionar o botao Cadastrar$")
+    public void selecionar_o_botao_Cadastrar() throws Throwable {
         register.clickRegisterButton();
     }
+
 
     @Então("^usuario deve ser cadastrado$")
     public void usuario_deve_ser_cadastrado() throws Throwable {
         register.registerOk();
     }
+
 }

@@ -21,4 +21,29 @@ public class RegisterTest extends BaseTest {
         register.clickRegisterButton();
         register.registerOk();
     }
+    @Test
+    public void RegisterInvalid() {
+        register.clickRegister();
+        register.insertNewEmail(generatedEmail+"@test.com");
+        register.insertPass("123");
+        register.insertNewPass("123");
+        register.clickRegisterButton();
+        register.registerNok();
+    }
+
+    @Test
+    public void RegisterEmpty() {
+        register.clickRegister();
+        register.clickRegisterButton();
+        register.registerEmpty();
+    }
+
+    @Test
+    public void RegisterNewPassEmpty() {
+        register.clickRegister();
+        register.insertNewEmail(generatedEmail+"@test.com");
+        register.insertPass("123456");
+        register.clickRegisterButton();
+        register.registerEmpty();
+    }
 }

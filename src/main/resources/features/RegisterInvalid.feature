@@ -8,5 +8,4 @@ Funcionalidade: Cadastro
     E informe um Email valido
     E informe uma senha menor que o requisito mínimo
     Quando clicar no botão Cadastrar
-    Então usuario NAO deve ser cadastrado
-    E mensagem de erro deve ser apresentada
+    Então usuario NAO deve ser cadastrado e mensagem de erro deve ser apresentada

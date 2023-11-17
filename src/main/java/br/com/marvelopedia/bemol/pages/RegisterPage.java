@@ -28,4 +28,11 @@ public class RegisterPage extends BasePage {
         findElementByText("//android.view.View[@text='Cadastro realizado com sucesso!']");
     }
 
+    public void registerNok() {
+        findElementByText("//android.view.View[@text='Error: Password should be at least 6 characters']");
+    }
+    public void registerEmpty() {
+        findElementByText("//android.view.View[@text='Insira os dados.']");
+    }
+
 }
