@@ -24,7 +24,6 @@ public class LoginTest extends BasePage {
 
     @Test
     public void LoginValid() {
-        login.waitLoadApp();
         login.insertEmail("williamteste@teste.com");
         login.insertPass("1234567");
         login.clickLogin();
@@ -33,7 +32,6 @@ public class LoginTest extends BasePage {
 
     @Test
     public void LoginInvalid() {
-        login.waitLoadApp();
         login.insertEmail("williamteste@teste.com");
         login.insertPass("senhainvalida");
         login.clickLogin();
@@ -42,7 +40,6 @@ public class LoginTest extends BasePage {
 
     @Test
     public void LoginEmailInvalid() {
-        login.waitLoadApp();
         login.insertEmail("williamtest");
         login.insertPass("1234567");
         login.clickLogin();
@@ -51,7 +48,6 @@ public class LoginTest extends BasePage {
 
     @Test
     public void LoginEmpty() {
-        login.waitLoadApp();
         login.insertEmail("");
         login.insertPass("");
         login.clickLogin();
