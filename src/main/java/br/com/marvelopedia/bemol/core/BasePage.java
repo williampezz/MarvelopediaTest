@@ -23,7 +23,4 @@ public class BasePage {
         return getDriver().findElement(MobileBy.xpath(text));
     }
 
-    public void waitLoadApp() {
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-    }
 }
