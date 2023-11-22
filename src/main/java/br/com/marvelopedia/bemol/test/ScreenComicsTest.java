@@ -32,4 +32,20 @@ public class ScreenComicsTest extends BaseTest {
         addCart.AddQntd();
         addCart.AddCart();
     }
+
+    @Test
+    public void AbandonedCart() {
+        addCart.SelectComic();
+        addCart.AddQntd();
+        addCart.AddCart();
+        addCart.AbandonedCart();
+    }
+
+    @Test
+    public void RemoveCart() {
+        addCart.SelectComic();
+        addCart.AddQntd();
+        addCart.AddCart();
+        addCart.RemoveCart();
+    }
 }
