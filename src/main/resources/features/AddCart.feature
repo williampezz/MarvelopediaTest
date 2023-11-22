@@ -1,9 +1,9 @@
 #language: pt
 
 @QA
-Funcionalidade: Cadastro
+Funcionalidade: Carrinho
   @test
-  Cenário: Cadastro vazio
+  Cenário: Adicionar produtos ao carrinho
    Dado que o usuario esteja logado no app e na aba Quadrinhos
    Quando acessar a PDP de um Quadrinho e selecionar o botao adicionar
    Entao produto deve ser adicionado no carrinho de compras

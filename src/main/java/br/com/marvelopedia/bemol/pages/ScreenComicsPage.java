@@ -12,16 +12,5 @@ public class ScreenComicsPage extends BasePage {
         findElementByText("//android.widget.Image[@text='5defb2083cd4c']").click();
     }
 
-    public void SelectComic() {
-        findElementByText("//android.widget.Image[@text='5defb2083cd4c']").click();
-    }
 
-    public void AddQntd() {
-        findElementByText("//android.widget.Button[@text='+']").click();
-    }
-
-    public void AddCart() {
-        findElementByText("//android.widget.Button[contains(@text, 'Adicionar')]").click();
-        findElementByText("Carrinho").isDisplayed();
-    }
 }

@@ -16,4 +16,17 @@ public class AddCartPage extends BasePage {
         findElementByText("//android.widget.Button[contains(@text, 'Adicionar')]").click();
         findElementByText("//android.view.View[@text='Carrinho']").isDisplayed();
     }
+
+    public void AbandonedCart() {
+        findElementByText("//android.view.View[@text='Carrinho']").isDisplayed();
+    }
+
+    public void RemoveCart() {
+        findElementByText("//android.view.View[@text='close']").click();
+
+        //Cenario vai falhar pois existe 2 bugs no app
+        //1 - A imagem de carrinho vazio nao é exibida
+        //2 - O valor do carrinho nao é zerado
+        findElementByText("//android.widget.Image[@text='emptycart']").isDisplayed();
+    }
 }
